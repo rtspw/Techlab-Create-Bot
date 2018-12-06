@@ -63,7 +63,7 @@ PAGE="""\
 
     /* - - - General Modifiers - - - */
     .upside-down {
-      transform: scaleY(-1);
+      transform: scaleY(-1) scaleX(-1);
       transition: transform .15s;
     }
 
@@ -505,8 +505,8 @@ PAGE="""\
         var w = (100 - Math.abs(y)) * (x / 10000) + x;
         var r = (v + w) / 2;
         var l = (v - w) / 2;
-        l = Math.round(l / 100 * 300);
-        r = Math.round(r / 100 * 300);
+        l = Math.round(l / 100 * 300) * -1;
+        r = Math.round(r / 100 * 300) * -1;
         return {l, r};
       }
 
