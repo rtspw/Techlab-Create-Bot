@@ -503,10 +503,10 @@ PAGE="""\
       function convertToTank(x, y) {
         var v = (100 - Math.abs(x)) * (y / 100) + y;
         var w = (100 - Math.abs(y)) * (x / 10000) + x;
-        var r = (v + w) / 2;
-        var l = (v - w) / 2;
-        l = Math.round(l / 100 * 300) * -1;
-        r = Math.round(r / 100 * 300) * -1;
+        var l = (v + w) / 2;
+        var r = (v - w) / 2;
+        l = Math.round(l / 100 * 300);
+        r = Math.round(r / 100 * 300);
         return {l, r};
       }
 
